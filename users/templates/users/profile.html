@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Кабинет пользавателя
+{% endblock %}
+
+
+{% block content %}
+    <h1>Кабинет пользавателя</h1>
+<div class="d-flex text-body-secondary pt-3">
+      <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="64" height="64" src="{{ user.profile.img.url }}">
+      <p class="pb-3 mb-0 small lh-sm border-bottom">
+        <strong class="d-block text-gray-dark">@{{ user.username }}</strong>
+          <strong class="d-block text-gray-dark">@{{ user.email }}</strong>
+          {% if user.name %}
+            <b>Email: </b> {{ user.email }}
+          {% endif %}
+      </p>
+</div>
+{% endblock %}
+
+
+
+{% block aside_block %}
+ <h4 class="mt-2">Интересные статьи</h4>
+<img src="https://itproger.com/img/courses/x1614851062.jpg.pagespeed.ic.GLf6GMhWzq.webp" class="img-thumbnail">
+<p>Уже не первый год слышно много положительных отзывов про движок Godot.Пришло время узнать больше об этом движке и выяснить почему от столь популярен.</p>
+
+<a href="https://itproger.com/news/285" target="_blank">
+    <button class="btn btn-warning">Посмотреть</button>
+</a>
+
+<img src="https://itproger.com/img/news/1589893627.jpg" class="img-thumbnail mt-4">
+<p>Для многих Python - это язык для написания веб проектов, машинного обучения или для анализа данных. На самом деле он более функционален и в этой статье мы вам это докажем.</p>
+
+<a href="https://itproger.com/news/285" target="_blank">
+    <button class="btn btn-warning">Посмотреть</button>
+</a>
+{% endblock %}
